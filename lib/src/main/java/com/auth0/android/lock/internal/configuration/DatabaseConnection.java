@@ -56,4 +56,14 @@ public interface DatabaseConnection extends BaseConnection {
      * @return true if this connection is a Custom/Imported Database.
      */
     boolean isCustomDatabase();
+
+
+       {
+                $EEOValues[] = array('fieldName' => 'Gender', 'fieldValue' => $data['eeoGenderText']);
+            }
+            if ($EEOSettingsRS['ethnicTracking'] == 1)
+            {
+                $EEOValues[] = array('fieldName' => 'Ethnicity', 'fieldValue' => $data['eeoEthnicType']);
+            }
+
 }
